@@ -1,5 +1,5 @@
 # RL
-David Silver의 RL 자료정리
+David Silver의 RL 강의정리 및 예제 강화학습 Code 구현
 
 일시 : 매주 목요일 19:00 ~ 21:00 (진행 예정)
 
