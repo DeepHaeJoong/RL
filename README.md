@@ -24,4 +24,8 @@
 
 [2] [UCL Course on RL : Reinforcement Learning](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 
-[3] [파이썬과 케라스로 배우는 강화학습](http://www.yes24.com/Product/Goods/44136413)
+[3] [팡요랩 Pang-Yo Lab : 강화학습의 기초 이론](https://www.youtube.com/playlist?list=PLpRS2w0xWHTcTZyyX8LMmtbcMXpd3s4TU)
+
+[4] [팡요랩 Pang-Yo Lab : 쉽게 읽는 강화학습 논문](https://www.youtube.com/playlist?list=PLpRS2w0xWHTcxz2Oj8yVOKrJJBiPCpl-a)
+
+[5] [파이썬과 케라스로 배우는 강화학습](http://www.yes24.com/Product/Goods/44136413)
