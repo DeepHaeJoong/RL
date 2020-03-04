@@ -1,9 +1,10 @@
 # RL
-David Silver의 RL 강의정리 및 예제 강화학습 Code 구현
 
-일시 : 매주 목요일 19:00 ~ 21:00 (진행 예정)
+목표 : David Silver의 RL 강의정리 및 예제 강화학습 Code 구현
 
-| 목차 | 내용 | 시간 | 발표자 |
+일정 : 매주 목요일 19:00 ~ 21:00 (진행 예정)
+
+| 목차 | 내용 | 일정 | 발표자 |
 |:----:|:----:|:----:|:----:|
 | Lecture 1 | Introduction to Reinforcement Learning | 2020-03-05 | 이해중 |
 | Lecture 2 | Markov Decision Processes | 2020-03-05 | 이해중 |
