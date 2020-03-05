@@ -14,8 +14,11 @@ ACTIONS = [(-1, 0), (1, 0), (0, -1), (0, 1)]  # 좌표로 나타낸 행동
 REWARDS = []
 
 
+# class 상속 (tk.Tk(baseclass) 메서드 기능 추가)
 class GraphicDisplay(tk.Tk):
+    # attribute (속성) 생성
     def __init__(self, agent):
+        # class 상속 (GraphicDisplay(baseclass) 속성 + title, geometry ... etc 속성 추가)
         super(GraphicDisplay, self).__init__()
         self.title('Policy Iteration')
         self.geometry('{0}x{1}'.format(HEIGHT * UNIT, HEIGHT * UNIT + 50))
@@ -28,7 +31,7 @@ class GraphicDisplay(tk.Tk):
         self.is_moving = 0
         (self.up, self.down, self.left, self.right), self.shapes = self.load_images()
         self.canvas = self._build_canvas()
-        self.text_reward(2, 2, "R : 1.0")
+        self.text_reward(1, 1, "R : 1.0")
         self.text_reward(1, 2, "R : -1.0")
         self.text_reward(2, 1, "R : -1.0")
 
@@ -227,8 +230,9 @@ class Env:
 
     def state_after_action(self, state, action_index):
         action = ACTIONS[action_index]
-        return self.state_after_action([state[0] + action[0], state[1] + action[1]])
+        return self.check_boundary([state[0] + action[0], state[1] + action[1]])
 
+    # 정적 메서드 사용 : 클래스에서 바로 메서드 호출하도록 함
     @staticmethod
     def check_boundary(state):
         state[0] = (0 if state[0] < 0 else WIDTH - 1
