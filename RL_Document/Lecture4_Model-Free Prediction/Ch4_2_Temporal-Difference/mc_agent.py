@@ -13,7 +13,7 @@ class MCAgent:
         self.learning_rate = 0.01
         self.discount_factor = 0.9
         self.epsilon = 0.1
-        self.samples = []
+        self.next_value_table = []
         self.value_table = defaultdict(float)
 
 
@@ -31,8 +31,6 @@ class MCAgent:
                 visit_state.append(state)
                 G_t = reward[1] + self.discount_factor * G_t
                 value = self.value_table[state]
-                print('---------------------------------------------')
-                print('state : {} , value : {}'.format(state, value))
                 self.value_table[state] = (value + self.learning_rate * (G_t - value))
 
     # 큐 함수에 따라서 행동을 반환
@@ -91,13 +89,9 @@ if __name__ == "__main__":
     env = Env()
     agent = MCAgent(actions=list(range(env.n_actions)))
 
-    for episode in range(3):
+    for episode in range(1000):
         state = env.reset()
         action = agent.get_action(state)
-        print("episode : {0}".format(episode+1))
-        print(agent.value_table)
-        print('-------------------')
-        # time.sleep(10)
         while True:
             env.render()
 
